@@ -12,3 +12,19 @@ export const getAllPosts = gql`
     }
   }
 `
+
+export const getPostByUri = gql`
+  query getPostByUri($id: ID!) {
+    post(id: $id, idType: URI) {
+      title
+      content
+      date
+      author {
+        node {
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+`
