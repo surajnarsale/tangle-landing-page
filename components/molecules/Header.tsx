@@ -104,7 +104,7 @@ const Header = () => {
   return (
     <header className="w-full  ">
       <Container>
-        <nav className="relative z-50 bg-light py-8 px-7  text-sm">
+        <nav className="relative z-50 bg-light py-4 px-2 text-sm sm:py-8  sm:px-7">
           <ul className="flex items-center">
             <li>
               <Link href="#">
