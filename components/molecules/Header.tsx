@@ -63,29 +63,34 @@ function MobileNavigation() {
                 <li>
                   <Link href="#features">
                     <div className="block w-full" onClick={() => close()}>
-                      Features
+                      Services
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="#testimonials">
                     <div className="block w-full" onClick={() => close()}>
-                      Testimonials
+                      Company
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#testimonials">
+                    <div className="block w-full" onClick={() => close()}>
+                      Work
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="#pricing">
                     <div className="block w-full" onClick={() => close()}>
-                      Pricing
+                      Stories
                     </div>
                   </Link>
                 </li>
-                <li className="border-t border-slate-300/40 pt-4">
-                  <Link href="/login">
-                    <div className="block w-full">Sign in</div>
-                  </Link>
-                </li>
+                {/* <li className="border-t border-slate-300/40 pt-4">
+                  <BaseButton href="/register">Lets Talk</BaseButton>
+                </li> */}
               </Popover.Panel>
             </Transition.Child>
           </Transition.Root>
@@ -109,37 +114,43 @@ const Header = () => {
                 </div>
               </Link>
             </li>
+
             <li className="ml-12 hidden md:block">
               <Link href="#features">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Features
+                  Services
                 </div>
               </Link>
             </li>
+
             <li className="ml-6 hidden md:block">
               <Link href="#testimonials">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Testimonials
+                  Company
                 </div>
               </Link>
             </li>
+
             <li className="ml-6 hidden md:block">
               <Link href="#pricing">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Pricing
+                  Work
                 </div>
               </Link>
             </li>
-            <li className="ml-auto hidden md:block">
-              <Link href="/login">
+
+            <li className="ml-6 hidden md:block">
+              <Link href="#pricing">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Sign in
+                  Stories
                 </div>
               </Link>
             </li>
-            <li className="ml-auto md:ml-8">
+
+            <li className="ml-auto md:block">
               <BaseButton href="/register">Lets Talk</BaseButton>
             </li>
+
             <li className="ml-5 -mr-1 md:hidden">
               <MobileNavigation />
             </li>
