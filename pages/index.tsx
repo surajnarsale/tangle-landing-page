@@ -1,3 +1,9 @@
+import LandingPage from '@/components/templates/LandingPage'
+
 export default function Home() {
-  return <>Homepage</>
+  return (
+    <>
+      <LandingPage>Homepage</LandingPage>
+    </>
+  )
 }
