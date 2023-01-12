@@ -6,6 +6,23 @@ module.exports = {
       sans: ['var(--font-montserrat)'],
       // other fonts families goes here
     },
+    colors: {
+      primary: {
+        500: '#FF5A15',
+        400: '#FFB697',
+        300: '#FFEAD8',
+        200: '#F1E8DF',
+        100: '#FFF6EE',
+      },
+      pink: '#FF94DC',
+      dark: {
+        500: '#10100F',
+        400: '#1F1E1D',
+        300: '#292725',
+        200: '#393634',
+      },
+      light: '#ffff',
+    },
 
     extend: {},
   },
