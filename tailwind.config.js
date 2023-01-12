@@ -7,6 +7,10 @@ module.exports = {
         sans: ['var(--font-montserrat)'],
         // other fonts families goes here
       },
+      screens: {
+        '-sm': { max: '639px' },
+        '-md': { max: '767px' },
+      },
 
       colors: {
         primary: {

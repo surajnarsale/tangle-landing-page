@@ -1,10 +1,11 @@
 import { Container } from '@/components/atoms/Container'
 import Image from 'next/image'
 import heroImage from '@/public/heroImage.png'
+import Balancer from 'react-wrap-balancer'
 
 const Hero = () => {
   return (
-    <Container className=" mx-auto max-w-5xl   px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
+    <Container className=" mx-auto max-w-[1110px]   px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
       <p className="mx-auto mb-3  text-sm sm:text-lg">from India 🇮🇳 to world</p>
       <h1 className=" mx-auto  pb-5 text-4xl font-medium  text-slate-900 sm:text-7xl">
         Bringing beauty & <br />
@@ -23,23 +24,27 @@ const Hero = () => {
           </span>
         </span>
       </h1>
-      <div className="h-[500px] bg-green-300">
-        <Image
-          className="mt-12 h-full object-cover"
-          src={heroImage}
-          alt="Picture of the author"
-          width={500}
-          height={800}
-          placeholder="blur"
-        />
-      </div>
-      <div className="mt-6 mb-16 text-2xl ">
-        At Tangle Design Studio, we help brands go beyond design by solving real digital problems
-        through our{' '}
-        <span className="italic underline decoration-orange-500 decoration-4">
-          {' '}
-          data-driven research methods.
-        </span>
+      <div className=" mt-12 flex flex-row  md:space-x-14 -sm:flex-col  ">
+        <div className="  -md:h-[500px]">
+          <Image
+            className=" h-full object-cover"
+            src={heroImage}
+            width={800}
+            height={800}
+            alt="Picture of the author"
+            placeholder="blur"
+          />
+        </div>
+        <div className=" h-full text-2xl md:self-end -sm:pt-6 -sm:pb-16">
+          <Balancer>
+            At Tangle Design Studio, we help brands go beyond design by solving real digital
+            problems through our{' '}
+            <span className="italic underline decoration-orange-500 decoration-4">
+              {' '}
+              data-driven research methods.
+            </span>
+          </Balancer>
+        </div>
       </div>
     </Container>
   )
