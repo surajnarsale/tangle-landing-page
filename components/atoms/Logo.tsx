@@ -8,7 +8,7 @@ type LogoProps = {
 export function Logo(props: PropsWithChildren<LogoProps>): JSX.Element {
   return (
     <>
-      <TangleLogo className="text-8xl" />
+      <TangleLogo className="h-12 w-28" />
     </>
   )
 }

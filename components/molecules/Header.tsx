@@ -97,13 +97,13 @@ function MobileNavigation() {
 
 const Header = () => {
   return (
-    <header className=" py-10">
+    <header className="w-full  ">
       <Container>
-        <nav className="relative z-50 text-sm">
+        <nav className="relative z-50 bg-light py-8 px-7  text-sm">
           <ul className="flex items-center">
             <li>
               <Link href="#">
-                <div className="bg-blue-300">
+                <div className="">
                   <span className="sr-only">Home</span>
                   <Logo className="h-10 w-auto " />
                 </div>
