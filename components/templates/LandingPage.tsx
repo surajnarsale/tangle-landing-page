@@ -1,12 +1,12 @@
-import Navbar from '@/components/molecules/Navbar'
+import Header from '@/components/molecules/Header'
 import { PropsWithChildren } from 'react'
 
 const LandingPage = (props: PropsWithChildren): JSX.Element => {
   return (
-    <>
-      <Navbar />
+    <div>
+      <Header />
       <main>{props.children}</main>
-    </>
+    </div>
   )
 }
 
