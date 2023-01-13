@@ -12,6 +12,10 @@ const WorkList = () => {
 
           <WorkCard className="mb-10  md:mb-16" />
           <WorkCard className="mb-10  md:mb-16" />
+
+          <p className="mx-auto  mb-10 text-center underline decoration-primary-500 decoration-4">
+            Load more
+          </p>
         </Container>
       </div>
     </>

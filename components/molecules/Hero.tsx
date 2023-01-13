@@ -5,9 +5,9 @@ import Balancer from 'react-wrap-balancer'
 
 const Hero = () => {
   return (
-    <Container className=" mx-auto max-w-[1110px]   px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
+    <Container className=" mx-auto max-w-[1110px] px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
       <p className="mx-auto mb-3  text-sm sm:text-lg">from India 🇮🇳 to world</p>
-      <h1 className=" mx-auto pb-5 font-melodrama text-4xl font-bold text-slate-900 sm:text-7xl ">
+      <h1 className="  mx-auto pb-5 font-melodrama text-4xl font-bold text-slate-900 sm:text-7xl">
         Bringing beauty & <br />
         functionality <br /> to your{' '}
         <span className="relative whitespace-nowrap ">
