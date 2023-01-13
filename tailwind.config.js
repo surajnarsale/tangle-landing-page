@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-montserrat)'],
+        melodrama: ['var(--font-melodrama)'],
+        generalSans: ['var(--font-generalSans)'],
         // other fonts families goes here
       },
       screens: {

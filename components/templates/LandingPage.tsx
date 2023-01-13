@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react'
 
 const LandingPage = (props: PropsWithChildren): JSX.Element => {
   return (
-    <div>
+    <div className="bg-primary-300">
       <Header />
       <main>{props.children}</main>
     </div>
