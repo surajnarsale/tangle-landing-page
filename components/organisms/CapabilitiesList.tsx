@@ -7,6 +7,7 @@ import UserInterface from '@/components/atoms/svgs/UiIcon.svg'
 import UserExperience from '@/components/atoms/svgs/UxdIcon.svg'
 import { Capability } from '@/types/index'
 import CapabilityCard from '../molecules/CapabilityCard'
+import NotSureBanner from '../molecules/NotSureBanner'
 type CapabilityWithId = Capability & { id: number }
 
 const allCapabilities: CapabilityWithId[] = [
@@ -81,6 +82,7 @@ const CapabilitiesList = () => {
               )
             })}
           </div>
+          <NotSureBanner className="mt-5" />
         </Container>
       </div>
     </>
