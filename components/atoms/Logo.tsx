@@ -1,5 +1,6 @@
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 import TangleLogo from '@/components/atoms/svgs/TangleLogo.svg'
+import clsx from 'clsx'
 
 type LogoProps = {
   className?: string
@@ -8,7 +9,7 @@ type LogoProps = {
 export function Logo(props: PropsWithChildren<LogoProps>): JSX.Element {
   return (
     <>
-      <TangleLogo className="h-12 w-28" />
+      <TangleLogo className={clsx('h-12 w-28', props.className)} />
     </>
   )
 }
