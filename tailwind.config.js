@@ -15,11 +15,11 @@ module.exports = {
 
       colors: {
         primary: {
+          100: '#FFF6EE',
           500: '#FF5A15',
           400: '#FFB697',
           300: '#FFEAD8',
           200: '#F1E8DF',
-          100: '#FFF6EE',
         },
         pink: '#FF94DC',
         dark: {
