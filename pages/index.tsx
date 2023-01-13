@@ -1,4 +1,5 @@
 import Hero from '@/components/molecules/Hero'
+import CapabilitiesList from '@/components/organisms/CapabilitiesList'
 import WorkList from '@/components/organisms/WorkList'
 import LandingPage from '@/components/templates/LandingPage'
 
@@ -8,6 +9,7 @@ export default function Home() {
       <LandingPage>
         <Hero />
         <WorkList />
+        <CapabilitiesList />
       </LandingPage>
     </div>
   )
