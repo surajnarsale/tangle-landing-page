@@ -13,7 +13,7 @@ export function FooterLinkButton(props: PropsWithChildren<FooterLinkButtonProps>
     <Link href={props.href!}>
       <div
         className={clsx(
-          'flex max-w-[266px] items-center justify-between  rounded-3xl bg-dark-500  py-4 px-8 px-4 py-2 text-2xl text-sm text-light sm:px-7 sm:py-3 ',
+          'flex max-w-[220px] items-center justify-between  rounded-full bg-dark-500  py-4 px-8 px-4 py-2 text-2xl text-sm text-light sm:px-7 sm:py-3 ',
           props.className
         )}
       >
