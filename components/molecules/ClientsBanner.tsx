@@ -11,7 +11,7 @@ const ClientsBanner = (props: PropsWithChildren<ClientsBannerProps>): JSX.Elemen
   return (
     <div className={clsx('bg-dark-300 py-16', props.className)}>
       <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 ">
-        <div className={clsx('', props.className)}>
+        <div>
           <p className="font-melodrama text-4xl font-bold text-primary-100">
             Delivered our craftsmanship to <br />
             <span className="font-generalSans font-medium italic underline decoration-pink decoration-4">
