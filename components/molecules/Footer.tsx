@@ -1,5 +1,6 @@
 import { TalkToExpertCard } from '@/components/atoms/TalkToExpertCard'
 import SocialLinks from '@/components/molecules/SocialLinks'
+import CopywrightFooter from '@/components/molecules/CopywrightFooter'
 
 export default function Footer() {
   return (
@@ -8,6 +9,7 @@ export default function Footer() {
         <TalkToExpertCard className="" />
         <SocialLinks />
       </div>
+      <CopywrightFooter />
     </footer>
   )
 }
