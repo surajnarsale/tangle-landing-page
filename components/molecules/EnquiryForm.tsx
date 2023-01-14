@@ -83,7 +83,7 @@ const EnquiryForm = (props: PropsWithChildren<EnquiryFormProps>): JSX.Element =>
         />
 
         <textarea
-          className="mt-7 w-full cursor-default resize-y rounded-[35px] border border-dark-400  bg-transparent px-7 py-5 pl-3  text-left  text-dark-500 placeholder-dark-500 focus:outline-none focus-visible:bg-primary-300 focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-400 sm:text-sm"
+          className="mt-7 h-60 w-full cursor-default resize-y rounded-[35px] border border-dark-400  bg-transparent px-7 py-5 pl-3  text-left  text-dark-500 placeholder-dark-500 focus:outline-none focus-visible:bg-primary-300 focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-400 sm:text-sm"
           placeholder="How may we help you?"
         ></textarea>
 
