@@ -24,7 +24,7 @@ const EnquiryForm = (props: PropsWithChildren<EnquiryFormProps>): JSX.Element =>
     <div className={clsx('bg-primary-300 py-12', props.className)}>
       <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 ">
         <p className=" text-xl ">Have a project on mind?</p>
-        <p className="mt-3  font-melodrama text-5xl ">hey@tangle.co.in</p>
+        <p className="mt-3  font-melodrama text-5xl font-semibold">hey@tangle.co.in</p>
 
         <Listbox value={selectedService} onChange={setSelectedService}>
           <div className="mt-10">
