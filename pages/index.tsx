@@ -1,5 +1,6 @@
 import AboutWorkingWithUs from '@/components/molecules/AboutWorkingWithUs'
 import ClientsBanner from '@/components/molecules/ClientsBanner'
+import EnquiryForm from '@/components/molecules/EnquiryForm'
 import Hero from '@/components/molecules/Hero'
 import CapabilitiesList from '@/components/organisms/CapabilitiesList'
 import WorkList from '@/components/organisms/WorkList'
@@ -14,6 +15,7 @@ export default function Home() {
         <CapabilitiesList />
         <ClientsBanner />
         <AboutWorkingWithUs />
+        <EnquiryForm />
       </LandingPage>
     </div>
   )

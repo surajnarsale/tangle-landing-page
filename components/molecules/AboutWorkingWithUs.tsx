@@ -9,7 +9,7 @@ type AboutWorkingWithUsProps = {
 const AboutWorkingWithUs = (props: PropsWithChildren<AboutWorkingWithUsProps>): JSX.Element => {
   return (
     <>
-      <div className={clsx('bg-dark-200 py-28', props.className)}>
+      <div className={clsx('bg-dark-200 py-20', props.className)}>
         <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 md:grid md:grid-cols-2 md:gap-8 ">
           <div className={clsx('', props.className)}>
             <p className="font-melodrama text-4xl font-bold text-primary-100">
