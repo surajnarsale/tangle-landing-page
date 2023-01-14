@@ -1,9 +1,13 @@
+import { TalkToExpertCard } from '@/components/atoms/TalkToExpertCard'
+import SocialLinks from '@/components/molecules/SocialLinks'
+
 export default function Footer() {
   return (
     <footer>
-      <a href="https://developers.wpengine.com" target="_blank" rel="noopener noreferrer">
-        Part of the WP Engine Headless Developers Road Map 🗺️
-      </a>
+      <div className="bg-dark-300 ">
+        <TalkToExpertCard />
+        <SocialLinks />
+      </div>
     </footer>
   )
 }
