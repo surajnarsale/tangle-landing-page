@@ -10,7 +10,7 @@ type CopywrightFooterProps = {
 const CopywrightFooter = (props: PropsWithChildren<CopywrightFooterProps>): JSX.Element => {
   return (
     <div className={clsx('flex border-t-2 border-light bg-primary-200', props.className)}>
-      <Container className="mx-auto flex max-w-[1110px] justify-center px-5  text-dark-500 ">
+      <Container className=" flex max-w-[1110px] items-center justify-center  px-5 text-center  text-dark-500 ">
         <div className="py-2">© {dayjs().year()} Tangledesign Studio Llp. All rights reserved.</div>
       </Container>
     </div>
