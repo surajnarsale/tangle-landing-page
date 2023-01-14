@@ -102,8 +102,8 @@ function MobileNavigation() {
 
 const Header = () => {
   return (
-    <header className="w-full font-medium  ">
-      <Container>
+    <header className="w-full font-medium sm:mx-auto sm:max-w-[1378px]">
+      <Container className="sm:px-4 -sm:px-0">
         <nav className="relative z-50 bg-primary-100 py-4 px-2 text-sm sm:py-8  sm:px-7">
           <ul className="flex items-center">
             <li>
