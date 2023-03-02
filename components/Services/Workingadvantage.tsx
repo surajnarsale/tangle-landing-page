@@ -41,19 +41,25 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
                 placeholder="blur"
               />
             </div>
-            <div className=" h-full text-2xl text-dusky md:self-end -sm:pt-6 -sm:pb-16 -sm:text-xl ">
+            <div className=" h-full text-4xl text-dusky md:self-end -sm:pt-6 -sm:pb-16 -sm:text-xl ">
               <Balancer>
                 Tangle has helped us to go <br /> beyond our{' '}
-                <span className="decoration-orange-500 font-medium italic text-orange decoration-4">
+                <span className="decoration-orange-500 font-medium italic text-orangefaint decoration-4">
                   {' '}
                   vision for design.
                 </span>
               </Balancer>
-              <h1>
+              <h1 className="w-96 text-xl text-duskyfont">
                 It is a long established fact that a reader will be distracted by the readable
                 content of a page when looking at its layout.
               </h1>
-              <hr className="h-7 w-16 text-pink" />
+
+              <hr className="h-7 w-16 font-medium text-pink" />
+
+              <p className="h-15.5 w-49.25 text-2xl">
+                Ashish Sharma <br />
+                <span className="text-base text-servicegray">CEO, Tangle Design Studio</span>
+              </p>
             </div>
           </div>
         </Container>

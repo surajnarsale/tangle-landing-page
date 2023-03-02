@@ -39,6 +39,8 @@ module.exports = {
         orange: '#FF5A15',
         gray: '#F1E8DF',
         dark4: '#393634',
+        duskyfont: '#FFF6EE',
+        servicegray: '#A7A19C',
       },
     },
   },
