@@ -113,11 +113,11 @@ const Fourthsection = () => {
             </div>
           </div>
           <hr className="text-dark-100" />
-          <div className=".text-white mt-15 md:grid md:grid-cols-3 md:gap-4">
+          <div className=".text-white mt-15 grid-cols-3  md:grid md:gap-4 -md:grid-cols-2">
             {Perks.map((p) => {
               return (
                 <div
-                  className="w-26   mt-4 mb-4 h-full text-4xl font-medium leading-8 text-dusky -sm:pt-6 -sm:pb-16 -sm:text-xl "
+                  className="w-26   mt-4 mb-4 h-full text-4xl font-medium leading-8 text-dusky -sm:pt-6 -sm:pb-16 -sm:text-xl -md:mt-10 -md:mb-10 "
                   key={p.id}
                 >
                   <p className="text-2xl">
@@ -136,7 +136,7 @@ const Fourthsection = () => {
         <Container className=" mx-auto max-w-[1110px]">
           <div className="flex">
             <div className="w-full">
-              <ul className=" flex list-none flex-row  bg-opacity-0 ">
+              <ul className=" flex list-none flex-row  bg-opacity-0 -md:flex-col">
                 <li className="-mb-px text-center last:mr-0">
                   <a
                     className={

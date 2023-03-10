@@ -5,13 +5,13 @@ import Motion from '@/components/atoms/svgs/MotionGraphicsIcon.svg'
 import Packaging from '@/components/atoms/svgs/PackagingDesignIcon.svg'
 import UserInterface from '@/components/atoms/svgs/UiIcon.svg'
 import UserExperience from '@/components/atoms/svgs/UxdIcon.svg'
-import { Capability } from '@/types/index'
-import CapabilityCard from '../molecules/CapabilityCard'
-import NotSureBanner from '../molecules/NotSureBanner'
 import Image from 'next/image'
 import Culture from '@/public/Culture.png'
 import Culture1 from '@/public/culture1.png'
 import Culture2 from '@/public/culture2.png'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation, motion } from 'framer-motion'
+import { useEffect } from 'react'
 
 const allCapabilities = [
   {
@@ -65,6 +65,29 @@ const allCapabilities = [
 ]
 
 const CultureList = () => {
+  const { ref, inView } = useInView({
+    threshold: 1,
+  })
+
+  const capabilityanimation = useAnimation()
+  useEffect(() => {
+    if (inView) {
+      capabilityanimation.start({
+        x: 0,
+        transition: {
+          type: 'spring',
+          duration: 1,
+          bounce: 0.3,
+        },
+      })
+    }
+    if (!inView) {
+      capabilityanimation.start({
+        x: '-100vw',
+      })
+    }
+  }, [inView, capabilityanimation])
+
   return (
     <div className="mx-auto w-full bg-blue-500">
       <div className="w-full bg-dark-300 pb-14">
@@ -79,8 +102,8 @@ const CultureList = () => {
             <Image
               className="hidden h-full object-cover md:block"
               src={Culture}
-              width={550}
-              height={649}
+              width={884}
+              height={442}
               alt="Clients discussing projects"
               placeholder="blur"
             />
@@ -102,19 +125,20 @@ const CultureList = () => {
               placeholder="blur"
             />
           </div>
-          <div className=".text-white mt-28 md:grid md:grid-cols-2 md:gap-4">
+          <div className=".text-white w-221 mt-28 md:grid md:grid-cols-2 md:gap-4">
             {allCapabilities.map((capability) => {
               return (
-                <div
-                  className="w-100 mt-2 mb-2 h-full text-4xl font-medium leading-8 text-dusky md:py-6 -sm:pt-3 -sm:pb-5 -sm:text-xl "
+                <motion.div
+                  ref={ref}
+                  className=" mt-2 mb-2 h-full  font-medium leading-8 text-dusky md:py-6 -sm:pt-3 -sm:pb-5 -sm:text-xl  -md:mt-11 -md:text-2xl"
                   key={capability.id}
                 >
                   <h1 className=".leading-11 w-60 text-4xl text-culturetext">{capability.title}</h1>
-                  <p className=".leading-8.67  text-2xl -sm:mt-2 -sm:w-80 -md:mt-3 -md:mb-4">
+                  <p className=".leading-8.67 w-100  text-2xl -sm:mt-2 -sm:w-80 -md:mt-3 -md:mb-4">
                     {capability.description1}{' '}
                     <span className=".leading-8.67 text-2xl italic">{capability.description2}</span>
                   </p>
-                </div>
+                </motion.div>
               )
             })}
           </div>
