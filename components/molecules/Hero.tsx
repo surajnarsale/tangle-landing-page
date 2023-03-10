@@ -20,18 +20,17 @@ const Hero = () => {
   return (
     <Container className=" mx-auto max-w-[1110px] px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
       <motion.p
-        // ref={ref}
-        initial={{ x: '-100vw' }}
-        animate={{ x: 0 }}
-        transition={{ duration: 1.5 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }}
         className="mx-auto mb-3  text-sm sm:text-lg"
       >
-        from India 🇮🇳 to world
+        from India to the world
       </motion.p>
       <motion.h1
-        initial={{ visibility: 'hidden', opacity: 0 }}
-        animate={{ visibility: 'visible', opacity: 1 }}
-        transition={{ duration: 2.5 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }}
         className="  mx-auto pb-5 font-melodrama text-4xl font-bold text-slate-900 sm:text-7xl"
       >
         Bringing beauty & <br />
