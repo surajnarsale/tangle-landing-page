@@ -56,7 +56,8 @@ const Heroabout = () => {
       <div className=" w-272.75 mt-1 h-full text-2xl md:self-end -sm:w-80 -sm:pt-3 -sm:pb-12 -sm:text-xl">
         <Balancer className="mt-3.5">
           We work closely with our clients to understand their goals and create custom designs that
-          perfectly align with their vision. Whether it's a brand refresh or a complete redesign,{' '}
+          perfectly align with their vision. Whether it&apos;s a brand refresh or a complete
+          redesign,{' '}
           <span className="font-medium italic underline decoration-orange decoration-4 -md:no-underline">
             we take pride in helping our clients stand out in a crowded market.
           </span>{' '}
@@ -66,8 +67,9 @@ const Heroabout = () => {
           <span className="font-medium italic underline decoration-orange decoration-4 -md:no-underline">
             we believe that design has the power to change the world.{' '}
           </span>
-          It's why we come to work every day, and it's what drives us to push the boundaries of
-          what's possible. We can't wait to see what we'll create next."
+          It&apos;s why we come to work every day, and it&apos;s what drives us to push the
+          boundaries of what&apos;s possible. We can&apos;t wait to see what we&apos;ll create
+          next.&apos;
         </Balancer>
       </div>
     </Container>
