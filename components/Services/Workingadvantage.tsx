@@ -12,7 +12,7 @@ type AboutWorkingWithUsProps = {
 const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JSX.Element => {
   return (
     <>
-      <div className={clsx('bg-dark-200 py-20', props.className)}>
+      <div className={clsx('bg-dark-200 py-20 -sm:py-10', props.className)}>
         <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 md:grid md:grid-cols-2 md:gap-8 ">
           <div className={clsx('', props.className)}>
             <p className="font-melodrama text-4xl font-bold text-primary-100">
@@ -29,7 +29,7 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
             </p>
           </div>
         </Container>
-        <Container className=" mx-auto max-w-[1110px] px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
+        <Container className=" mx-auto max-w-[1110px] px-5 pb-5 pt-20 text-dark-500 lg:pt-32  ">
           <div className=" mt-12 flex flex-row md:space-x-14 -sm:flex-col   ">
             <div className="  -md:h-[500px]">
               <Image
@@ -44,19 +44,18 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
             <div className=" h-full text-4xl text-dusky md:self-end -sm:pt-6 -sm:pb-16 -sm:text-xl ">
               <Balancer>
                 Tangle has helped us to go <br /> beyond our{' '}
-                <span className="decoration-orange-500 font-medium italic text-orangefaint decoration-4">
-                  {' '}
+                <span className="font-medium italic text-orangefaint decoration-orange decoration-4">
                   vision for design.
                 </span>
               </Balancer>
-              <h1 className="w-96 text-xl text-duskyfont">
+              <h1 className="mt-4 w-96 text-xl text-duskyfont">
                 It is a long established fact that a reader will be distracted by the readable
                 content of a page when looking at its layout.
               </h1>
 
-              <hr className="h-7 w-16 font-medium text-pink" />
+              <div className="mt-4 h-[4px] w-[72px] bg-pink " />
 
-              <p className="h-15.5 w-49.25 text-2xl">
+              <p className="h-15 mt-12 text-2xl">
                 Ashish Sharma <br />
                 <span className="text-base text-servicegray">CEO, Tangle Design Studio</span>
               </p>

@@ -36,7 +36,7 @@ const Hero = () => {
         Bringing beauty & <br />
         functionality <br /> to your{' '}
         <span className="relative whitespace-nowrap ">
-          <span className="decoration-orange-500 relative font-generalSans font-medium italic underline decoration-4">
+          <span className="relative font-generalSans font-medium italic underline decoration-orange decoration-4">
             digital products.
           </span>
         </span>
@@ -68,8 +68,7 @@ const Hero = () => {
           <Balancer>
             At Tangle Design Studio, we help brands go beyond design by solving real digital
             problems through our{' '}
-            <span className="decoration-orange-500 font-medium italic underline decoration-4">
-              {' '}
+            <span className="font-medium italic underline decoration-orange decoration-4">
               data-driven research methods.
             </span>
           </Balancer>

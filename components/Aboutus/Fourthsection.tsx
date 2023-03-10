@@ -101,8 +101,8 @@ const Fourthsection = () => {
             >
               Join us and be the{' '}
               <span
-                className="font-General Sans decoration-orange-500
- text-6xl font-medium italic underline "
+                className="font-General Sans text-6xl
+ font-medium italic underline decoration-orange "
               >
                 next tangler.
               </span>
