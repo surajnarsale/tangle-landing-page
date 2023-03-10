@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer'
 const links = [
   { name: 'Services' },
   { name: 'Privacy Policy' },
-  { name: 'Work' },
+  // { name: 'Work' },
   { name: 'Cookies' },
   { name: 'About us' },
   { name: 'Career' },
