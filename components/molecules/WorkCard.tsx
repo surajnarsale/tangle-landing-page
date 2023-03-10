@@ -3,6 +3,8 @@ import work1 from '@/public/work_1.png'
 import { BaseButton } from '@/components/atoms/BaseButton'
 import { PropsWithChildren } from 'react'
 import clsx from 'clsx'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 type WorkCardProps = {
   className?: string

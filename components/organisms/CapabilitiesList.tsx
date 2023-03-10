@@ -8,7 +8,10 @@ import UserExperience from '@/components/atoms/svgs/UxdIcon.svg'
 import { Capability } from '@/types/index'
 import CapabilityCard from '../molecules/CapabilityCard'
 import NotSureBanner from '../molecules/NotSureBanner'
+import { animate, motion, useAnimation } from 'framer-motion'
 type CapabilityWithId = Capability & { id: number }
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 const allCapabilities: CapabilityWithId[] = [
   {
@@ -56,18 +59,49 @@ const allCapabilities: CapabilityWithId[] = [
 ]
 
 const CapabilitiesList = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  })
+  const animation = useAnimation()
+  useEffect(() => {
+    console.log(inView, 'capability banner')
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        visibility: 'visible',
+        transition: {
+          duration: 1,
+          bounce: 0.5,
+        },
+      })
+    }
+    if (!inView) {
+      animation.start({
+        x: '-100vw',
+        opacity: 0,
+        visibility: 'hidden',
+        transition: {
+          duration: 0.4,
+        },
+      })
+    }
+  }, [inView])
+
   return (
     <>
       <div className="pb-14">
         <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 ">
-          <div className="pb-16">
-            <p className=" mb-9 pt-16 text-3xl font-medium italic underline decoration-pink decoration-4 lg:pt-32">
-              <span className="font-melodrama text-4xl font-bold"> Our</span> <br /> Capabilities
-            </p>
-            <p className=" text-2xl font-normal">
-              We believe in delivering products beyond expectations. We put all the effort to build
-              things which feel larger than life.
-            </p>
+          <div ref={ref}>
+            <motion.div animate={animation} className="pb-16">
+              <p className=" mb-9 pt-16 text-3xl font-medium italic underline decoration-pink decoration-4 lg:pt-32">
+                <span className="font-melodrama text-4xl font-bold"> Our</span> <br /> Capabilities
+              </p>
+              <p className=" text-2xl font-normal">
+                We believe in delivering products beyond expectations. We put all the effort to
+                build things which feel larger than life.
+              </p>
+            </motion.div>
           </div>
           <div className="md:grid md:grid-cols-2 md:gap-4">
             {allCapabilities.map((capability) => {
