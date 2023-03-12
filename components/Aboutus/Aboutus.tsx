@@ -48,8 +48,8 @@ const Company = () => {
               </a>
             </li>
           </ul>
-          <div className="break-wordsbg-opacity-0 relative">
-            <div className=" bg-opacity-0 px-4 py-5">
+          <div className="break-wordsbg-opacity-0 relative ">
+            <div className=" bg-opacity-0  py-5">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? 'block' : 'hidden'} id="link1">
                   <Heroabout />
@@ -60,7 +60,6 @@ const Company = () => {
                 <div className={openTab === 2 ? 'block' : 'hidden'} id="link2">
                   <p>Careers</p>
                 </div>
-                <Footer />
               </div>
             </div>
           </div>
