@@ -89,7 +89,7 @@ const CultureList = () => {
   }, [inView, capabilityanimation])
 
   return (
-    <div className="mx-auto w-full bg-blue-500">
+    <div className="mx-auto w-full">
       <div className="w-full bg-dark-300 pb-14">
         <Container className=" mx-auto  max-w-[1110px] px-5 pb-4 ">
           <div className="pb-16 text-white">
