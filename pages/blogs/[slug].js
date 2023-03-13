@@ -6,11 +6,13 @@ import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 
 import Nav from '/components/atoms/Nav'
-import Button from '/components/atoms/Button'
 
-const components = { Nav, Button, SyntaxHighlighter }
+const components = { Nav, SyntaxHighlighter }
 
-const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
+const PostPage = ({
+  frontMatter: { title, date, description, thumbnailUrl, tags, author, readingTime },
+  mdxSource,
+}) => {
   return (
     <div className="mt-4">
       <h1>{title}</h1>
