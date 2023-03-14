@@ -129,8 +129,9 @@ const Fourthsection = () => {
             })}
           </div>
           <hr className="text-dark-100" />
-
-          <h2 className="mt-8 mb-4 h-9 text-3xl font-medium text-dusky">Open Positions</h2>
+          <section id="open-positions">
+            <h2 className="mt-8 mb-4 h-9 text-3xl font-medium text-dusky">Open Positions</h2>
+          </section>
         </Container>
 
         <Container className=" mx-auto max-w-[1110px]">

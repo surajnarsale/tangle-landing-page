@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { BaseButton } from '@/components/atoms/BaseButton'
 import { Container } from '@/components/atoms/Container'
 import { Logo } from '@/components/atoms/Logo'
+import { handleScrollToSection } from '@/utils/hadle-scroll-to-section'
 
 function MobileNavigation() {
   return (
@@ -107,7 +108,7 @@ const Header = () => {
         <nav className="relative z-50 bg-primary-100 py-4 px-2 text-sm sm:py-8  sm:px-7">
           <ul className="flex items-center">
             <li>
-              <Link href="#">
+              <Link href="/">
                 <div className="">
                   <span className="sr-only">Home</span>
                   <Logo className="h-10 w-auto " />
@@ -116,7 +117,7 @@ const Header = () => {
             </li>
 
             <li className="ml-12 hidden md:block">
-              <Link href="#features">
+              <Link href="/services">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                   Services
                 </div>
@@ -124,7 +125,7 @@ const Header = () => {
             </li>
 
             <li className="ml-6 hidden md:block">
-              <Link href="#testimonials">
+              <Link href="/aboutus">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                   Company
                 </div>
@@ -132,17 +133,18 @@ const Header = () => {
             </li>
 
             <li className="ml-6 hidden md:block">
-              <Link href="#pricing">
-                <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Work
-                </div>
-              </Link>
+              <div
+                onClick={() => handleScrollToSection('work')}
+                className="cursor-pointer rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+              >
+                Work
+              </div>
             </li>
 
             <li className="ml-6 hidden md:block">
-              <Link href="#pricing">
+              <Link href="/blogs">
                 <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Stories
+                  Resources
                 </div>
               </Link>
             </li>
