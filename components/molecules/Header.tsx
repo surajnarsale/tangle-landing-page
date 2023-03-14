@@ -111,7 +111,7 @@ const Header = () => {
               <Link href="/">
                 <div className="">
                   <span className="sr-only">Home</span>
-                  <Logo className="h-10 w-auto " />
+                  <Logo className="h-10 w-[117px] " />
                 </div>
               </Link>
             </li>
