@@ -70,9 +70,9 @@ export default function Home() {
                   <div className="tab-content tab-space">
                     <div>
                       <div className=".text-white mt-15 gap-4 md:grid md:grid-cols-3 md:gap-4">
-                        {Blogs.map((e) => {
+                        {Blogs.map((e, index) => {
                           return (
-                            <div key={e.id} className="m-4 cursor-pointer">
+                            <div key={index} className="m-4 cursor-pointer">
                               <div className="w-26 h-full bg-grey text-4xl font-medium leading-8 text-skin md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
                                 <h1 className="h-15 w-61 text-500 mt-2 ml-4 text-2xl text-culturetext">
                                   {e.title}
