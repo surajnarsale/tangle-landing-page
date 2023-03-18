@@ -15,14 +15,14 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
       <div className={clsx('bg-dark-200 py-20 -sm:py-10', props.className)}>
         <Container className="mx-auto flex max-w-[1110px] justify-between px-5  text-dark-500 -md:flex-col -md:gap-8 ">
           <div className="">
-            <p className=" w-105 font-melodrama text-6xl font-bold text-primary-100 -md:w-80 -md:text-4xl">
+            <p className=" w-96 font-melodrama text-6xl font-bold text-primary-100 -md:w-80 -md:text-4xl">
               About working <br />
               <span className="font-generalSans font-medium italic underline decoration-pink decoration-4">
                 with us
               </span>
             </p>
           </div>
-          <div className="h-full w-96 self-end text-xl text-primary-200 -sm:pt-6 -sm:pb-16 -sm:text-xl -md:self-end">
+          <div className="h-full w-96 self-end text-xl text-primary-200 -sm:pt-6 -sm:pb-16 -sm:text-xl -md:w-80 -md:self-end">
             <p className="">
               Its an immense pleasure to hear from those we've helped. While doing a project, we
               always put all the energy as if your brand is ours.
