@@ -69,7 +69,11 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block  px-5 py-3 text-sm' +
+<<<<<<< Updated upstream
                   (openTab === 1 ? ' text-orange italic underline' : '  text-black')
+=======
+                  (openTab === 1 ? ' italic text-primary-500 underline' : '  text-black')
+>>>>>>> Stashed changes
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -86,7 +90,11 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block px-5  py-3 text-sm' +
+<<<<<<< Updated upstream
                   (openTab === 2 ? ' text-orange italic underline' : '  text-black')
+=======
+                  (openTab === 2 ? ' italic text-primary-500 underline' : '  text-black')
+>>>>>>> Stashed changes
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -103,7 +111,11 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block  px-5 py-3 text-sm' +
+<<<<<<< Updated upstream
                   (openTab === 3 ? ' text-orange italic underline' : ' text-black')
+=======
+                  (openTab === 3 ? ' italic text-primary-500 underline' : ' text-black')
+>>>>>>> Stashed changes
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -120,7 +132,11 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block px-5 py-3 text-sm ' +
+<<<<<<< Updated upstream
                   (openTab === 4 ? ' text-orange italic underline' : ' text-black')
+=======
+                  (openTab === 4 ? ' italic text-primary-500 underline' : ' text-black')
+>>>>>>> Stashed changes
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -142,7 +158,11 @@ const Tabs = ({ color }) => {
                     {Blogs.map((e) => {
                       return (
                         <div key={e.id} className="m-4 cursor-pointer">
+<<<<<<< Updated upstream
                           <div className="w-26 bg-grey text-skin h-full text-4xl font-medium leading-8 md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
+=======
+                          <div className="w-26 h-full bg-dark-200 text-4xl font-medium leading-8 text-primary-300 md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
+>>>>>>> Stashed changes
                             <h1 className="h-15 w-61 text-500 text-culturetext mt-2 ml-4 text-2xl">
                               {e.title}
                             </h1>

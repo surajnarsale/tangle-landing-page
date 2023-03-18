@@ -65,7 +65,7 @@ const Heroabout = () => {
           <div>
             Tangle is based in Pune, India. From the way a website looks and functions to the{' '}
             packaging for a new product, we believe that{' '}
-            <span className="font-medium italic underline decoration-orange decoration-4 -md:no-underline">
+            <span className="font-medium italic underline decoration-primary-500 decoration-4 -md:no-underline">
               {' '}
               good design has the power to transform and elevate{' '}
             </span>
@@ -74,7 +74,7 @@ const Heroabout = () => {
           <div>
             Our team of talented designers are experts in their field, are based throughout the
             globe, and has a passion for creating visually stunning and effective designs that{' '}
-            <span className="font-medium italic underline decoration-orange decoration-4 -md:no-underline">
+            <span className=" font-medium italic underline decoration-primary-500 decoration-4 -md:no-underline">
               tell a story and drive results.
             </span>
           </div>
@@ -89,13 +89,13 @@ const Heroabout = () => {
         <Balancer className="mt-3.5">
           We work closely with our clients to understand their goals and create custom designs that
           perfectly align with their vision. Whether it's a brand refresh or a complete redesign,{' '}
-          <span className="font-medium italic underline decoration-orange decoration-4 -md:no-underline">
+          <span className=" font-medium italic underline decoration-primary-500 decoration-4 -md:no-underline">
             we take pride in helping our clients stand out in a crowded market.
           </span>{' '}
         </Balancer>
         <Balancer className="mt-3.5">
           At Tangle Design Studio,
-          <span className="font-medium italic underline decoration-orange decoration-4 -md:no-underline">
+          <span className="font-medium italic underline decoration-primary-500 decoration-4 -md:no-underline">
             we believe that design has the power to change the world.{' '}
           </span>
           It's why we come to work every day, and it's what drives us to push the boundaries of

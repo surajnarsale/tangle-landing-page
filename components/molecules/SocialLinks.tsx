@@ -7,18 +7,18 @@ import { useInView } from 'react-intersection-observer'
 const links = [
   { name: 'Services' },
   { name: 'Privacy Policy' },
-  { name: 'Work' },
+  // { name: 'Work' },
   { name: 'Cookies' },
   { name: 'About us' },
   { name: 'Career' },
 ]
 const socialLinks = [
-  { name: 'Linkedin' },
-  { name: 'Dribble' },
-  { name: 'Instagram' },
-  { name: 'Youtube' },
-  { name: 'Pinterest' },
-  { name: 'Behance' },
+  { name: 'Linkedin', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
+  { name: 'Dribble', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
+  { name: 'Instagram', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
+  { name: 'Youtube', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
+  { name: 'Pinterest', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
+  { name: 'Behance', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
 ]
 
 type SocialLinksProps = {
@@ -89,7 +89,7 @@ const SocialLinks = (props: PropsWithChildren<SocialLinksProps>): JSX.Element =>
               <>
                 <div ref={ref}>
                   <motion.div animate={socialanimation}>
-                    <FooterLinkButton className="mt-6" href="#">
+                    <FooterLinkButton className="mt-6" href={link.link}>
                       {link.name}
                     </FooterLinkButton>
                   </motion.div>

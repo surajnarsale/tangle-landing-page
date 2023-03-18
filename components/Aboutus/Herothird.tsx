@@ -6,10 +6,10 @@ import Balancer from 'react-wrap-balancer'
 const Herothird = () => {
   return (
     <Container className=" mx-auto max-w-[1110px] px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
-      <div className="flex-start -sm:flex-col-reverse -md:flex-col-reverse">
-        <Balancer className="w-221.5 .leading-16 -sm:leading-10.8375 h-65 mb-4 text-4xl font-medium leading-8 md:self-end -sm:w-80 -sm:pt-6 -sm:pb-16 -sm:text-xl -sm:font-medium -md:text-3xl ">
+      <div className="flex-start  flex-col -sm:flex-col-reverse -md:flex-col-reverse">
+        <Balancer className="-sm:leading-10.8375  mb-4 text-4xl font-medium md:self-end  -sm:w-80 -sm:pt-6 -sm:pb-16 -sm:text-3xl -sm:font-medium -md:text-3xl ">
           Before being a Designers, engineers, managers, cinematographers, directors, and animators,
-          <span className=" font-medium italic  underline decoration-orange -md:text-3xl -md:no-underline">
+          <span className=" font-medium italic  underline decoration-primary-500 -md:text-3xl -md:no-underline">
             {' '}
             we are kind humans who love to live life while we work.{' '}
           </span>
