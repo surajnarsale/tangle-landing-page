@@ -1,11 +1,11 @@
 import type { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import { Container } from '@/components/atoms/Container'
-import Google from '@/components/atoms/svgs/google.svg'
-import Bajaj from '@/components/atoms/svgs/bajaj.svg'
-import Dotpe from '@/components/atoms/svgs/dotpe.svg'
 import Phynart from '@/components/atoms/svgs/phynart.svg'
 import Sociohub from '@/components/atoms/svgs/sociohub.svg'
+import Avabodham from '@/components/atoms/svgs/avabodham.svg'
+import Amity from '@/components/atoms/svgs/amity.svg'
+import Dotline from '@/components/atoms/svgs/dotline.svg'
 
 type ClientsBannerProps = {
   className?: string
@@ -13,11 +13,11 @@ type ClientsBannerProps = {
 
 const ClientsBanner = (props: PropsWithChildren<ClientsBannerProps>): JSX.Element => {
   const components = [
-    <Google key={1} className="grid h-[60px] w-[100px]" />,
-    <Bajaj key={2} className="grid h-[60px] w-[100px]" />,
-    <Dotpe key={3} className="grid h-[60px] w-[100px]" />,
-    <Phynart key={4} className="grid h-[60px] w-[100px]" />,
-    <Sociohub key={5} className="grid h-[60px] w-[100px]" />,
+    <Phynart key={1} className="h-[60px] w-[200px]" />,
+    <Sociohub key={2} className="h-[60px] w-[200px]" />,
+    <Avabodham key={3} className="h-[60px] w-[200px]" />,
+    <Amity key={4} className="h-[60px] w-[200px]" />,
+    <Dotline key={5} className="h-[60px] w-[200px]" />,
   ]
 
   return (
@@ -35,7 +35,9 @@ const ClientsBanner = (props: PropsWithChildren<ClientsBannerProps>): JSX.Elemen
           {components.map((component) => {
             return (
               <>
-                <div key={component.key}>{component}</div>
+                <div key={component.key} className="grid ">
+                  {component}
+                </div>
               </>
             )
           })}
