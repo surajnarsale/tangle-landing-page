@@ -14,16 +14,16 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
   return (
     <>
       <div className={clsx('bg-dark-200 py-20 -sm:py-10', props.className)}>
-        <Container className="mx-auto flex max-w-[1110px] justify-between px-5  text-dark-500 -md:flex-col -md:gap-8 ">
+        <Container className="mx-auto flex max-w-[1110px] justify-between  px-5 text-dark-500 -md:flex-col -md:gap-8 ">
           <div className="">
-            <p className=" w-96 font-melodrama text-6xl font-bold text-primary-100 -md:w-80 -md:text-4xl">
+            <p className="font-melodrama text-6xl font-bold text-primary-100 -md:w-80 -md:text-4xl">
               About working <br />
               <span className="font-generalSans font-medium italic underline decoration-pink decoration-4">
                 with us
               </span>
             </p>
           </div>
-          <div className="h-full w-96 self-end text-xl text-primary-200 -sm:pt-6 -sm:pb-16 -sm:text-xl -md:w-80 -md:self-end">
+          <div className="ml-20 max-w-[424px] self-end  text-xl text-primary-200 -sm:pt-6 -sm:pb-16 -sm:text-xl -md:w-80 -md:self-end">
             <p className="">
               Its an immense pleasure to hear from those we've helped. While doing a project, we
               always put all the energy as if your brand is ours.
@@ -54,11 +54,11 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
                 content of a page when looking at its layout.
               </h1>
 
-              <hr className="mt-4 h-[4px] w-[72px] bg-pink " />
+              <div className="mt-4 h-[4px] w-[72px] bg-pink " />
 
               <p className="h-15 mt-12 text-2xl">
                 Ashish Sharma <br />
-                <span className="text-base text-servicegray">CEO, Tangle Design Studio</span>
+                <span className="text-base text-servicegray">CEO, Phynart Technologies</span>
               </p>
             </div>
           </div>
