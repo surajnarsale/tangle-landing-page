@@ -1,3 +1,4 @@
+import WorkingAdvantage from '@/components/Services/Workingadvantage'
 import AboutWorkingWithUs from '@/components/molecules/AboutWorkingWithUs'
 import ClientsBanner from '@/components/molecules/ClientsBanner'
 import EnquiryForm from '@/components/molecules/EnquiryForm'
@@ -14,7 +15,7 @@ export default function Home() {
         <WorkList />
         <CapabilitiesList />
         <ClientsBanner />
-        <AboutWorkingWithUs />
+        <WorkingAdvantage />
         <EnquiryForm />
       </LandingPage>
     </div>

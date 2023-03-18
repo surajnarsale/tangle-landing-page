@@ -96,32 +96,32 @@ const Fourthsection = () => {
         <Container className=" mx-auto max-w-[1110px] px-5 pb-4 ">
           <div className=" flex flex-col justify-between pt-12 pb-16 text-dusky md:flex-row">
             <div
-              className="font-General Sans text-6xl
- font-medium md:w-3/6"
+              className=" font-melodrama text-6xl font-bold
+ text-primary-100 md:w-3/6"
             >
               Join us and be the{' '}
               <span
-                className="font-General Sans decoration-orange-500
- text-6xl font-medium italic underline "
+                className="font-General Sans text-6xl
+ font-medium italic underline  decoration-pink"
               >
                 next tangler.
               </span>
             </div>
-            <div className=" pt-10  text-xl font-normal md:w-3/6">
+            <div className=" pt-10  text-xl font-normal text-primary-100 md:w-3/6">
               We always love to meet new interesting people. Help us by joining the team and making
               world a better place through design.
             </div>
           </div>
           <hr className="text-dark-100" />
-          <div className=".text-white mt-15 md:grid md:grid-cols-3 md:gap-4">
+          <div className=".text-white mt-15 grid-cols-3  md:grid md:gap-4 -md:grid-cols-2">
             {Perks.map((p) => {
               return (
                 <div
-                  className="w-26   mt-4 mb-4 h-full text-4xl font-medium leading-8 text-dusky -sm:pt-6 -sm:pb-16 -sm:text-xl "
+                  className="w-65   mt-4 mb-4 h-full text-4xl font-medium leading-8 text-dusky -sm:pt-6 -sm:pb-16 -sm:text-xl -md:mt-10 -md:mb-10 "
                   key={p.id}
                 >
-                  <p className="text-2xl">
-                    <span className="text-2xl italic text-culturetext">{p.title} </span>
+                  <p className="text-2xl text-primary-200">
+                    <span className="text-2xl italic  text-primary-400">{p.title} </span>
                     {p.description}
                   </p>
                 </div>
@@ -130,18 +130,20 @@ const Fourthsection = () => {
           </div>
           <hr className="text-dark-100" />
 
-          <h2 className="mt-8 mb-4 h-9 text-3xl font-medium text-dusky">Open Positions</h2>
+          <h2 className="mt-8 mb-4 h-9 text-3xl font-medium text-primary-200">Open Positions</h2>
         </Container>
 
         <Container className=" mx-auto max-w-[1110px]">
           <div className="flex">
             <div className="w-full">
-              <ul className=" flex list-none flex-row  bg-opacity-0 ">
+              <ul className=" flex list-none flex-row  bg-opacity-0 -md:flex-col">
                 <li className="-mb-px text-center last:mr-0">
                   <a
                     className={
                       'block  px-5 py-3 text-sm' +
-                      (openSection === 1 ? ' italic text-orange underline' : '  text-gray')
+                      (openSection === 1
+                        ? ' italic text-primary-500 underline'
+                        : '  text-primary-200')
                     }
                     onClick={(e) => {
                       e.preventDefault()
@@ -158,7 +160,9 @@ const Fourthsection = () => {
                   <a
                     className={
                       'block  px-5 py-3 text-sm' +
-                      (openSection === 2 ? ' italic text-orange underline' : '  text-gray')
+                      (openSection === 2
+                        ? ' italic text-primary-500 underline'
+                        : '  text-primary-200')
                     }
                     onClick={(e) => {
                       e.preventDefault()
@@ -175,7 +179,9 @@ const Fourthsection = () => {
                   <a
                     className={
                       'block  px-5 py-3 text-sm' +
-                      (openSection === 3 ? ' italic text-orange underline' : '  text-gray')
+                      (openSection === 3
+                        ? ' italic text-primary-500 underline'
+                        : '  text-primary-200')
                     }
                     onClick={(e) => {
                       e.preventDefault()
@@ -192,7 +198,9 @@ const Fourthsection = () => {
                   <a
                     className={
                       'block  px-5 py-3 text-sm' +
-                      (openSection === 4 ? ' italic text-orange underline' : '  text-gray')
+                      (openSection === 4
+                        ? ' italic text-primary-500 underline'
+                        : '  text-primary-200')
                     }
                     onClick={(e) => {
                       e.preventDefault()
@@ -209,7 +217,9 @@ const Fourthsection = () => {
                   <a
                     className={
                       'block  px-5 py-3 text-sm' +
-                      (openSection === 5 ? ' italic text-orange underline' : '  text-gray')
+                      (openSection === 5
+                        ? ' italic text-primary-500 underline'
+                        : '  text-primary-200')
                     }
                     onClick={(e) => {
                       e.preventDefault()
@@ -226,7 +236,9 @@ const Fourthsection = () => {
                   <a
                     className={
                       'block  px-5 py-3 text-sm' +
-                      (openSection === 6 ? ' italic text-orange underline' : '  text-gray')
+                      (openSection === 6
+                        ? ' italic text-primary-500 underline'
+                        : '  text-primary-200')
                     }
                     onClick={(e) => {
                       e.preventDefault()
@@ -250,24 +262,24 @@ const Fourthsection = () => {
                           return (
                             <div key={e.id} className="m-4 cursor-pointer">
                               <div className="w-244 h-19.25 flex h-full justify-between bg-dark-300 font-medium leading-8 text-skin md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
-                                <div className="h-15 w-61 text-500 mt-2 ml-4 flex flex-row text-2xl text-dusky -md:flex-col">
+                                <div className="h-15 w-61 mt-2 ml-4 flex flex-row text-2xl  text-primary-200 -md:flex-col">
                                   {e.role}
                                   <div>
-                                    <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
                                       {e.experience}
                                     </span>
-                                    <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
                                       {e.type}
                                     </span>
-                                    <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
                                       {e.payStrucutre}
                                     </span>
-                                    <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
                                       {e.location}
                                     </span>
                                   </div>
                                 </div>
-                                <div className="mr-7 text-orange">
+                                <div className="mr-7 text-primary-500">
                                   Apply <span className="h-5 text-2xl"> → </span>
                                 </div>
                               </div>
@@ -285,22 +297,24 @@ const Fourthsection = () => {
                           return (
                             <div key={e.id} w-244 className="m-4 cursor-pointer">
                               <div className="w-26 flex h-full justify-between bg-dark-300 font-medium leading-8 text-skin md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
-                                <h1 className="h-15 w-61 text-500 mt-2 ml-4 text-2xl text-dusky">
+                                <div className="h-15 w-61 mt-2 ml-4 flex flex-row text-2xl text-dusky text-primary-200 -md:flex-col">
                                   {e.role}
-                                  <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
-                                    {e.experience}
-                                  </span>
-                                  <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
-                                    {e.type}
-                                  </span>
-                                  <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
-                                    {e.payStrucutre}
-                                  </span>
-                                  <span className="ml-2 rounded-lg bg-dark4 p-1 text-xs text-orangefaint">
-                                    {e.location}
-                                  </span>
-                                </h1>
-                                <div className="mr-7 text-orange">
+                                  <div>
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
+                                      {e.experience}
+                                    </span>
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
+                                      {e.type}
+                                    </span>
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
+                                      {e.payStrucutre}
+                                    </span>
+                                    <span className="ml-2 rounded-lg bg-dark-200 p-1 text-xs text-primary-400">
+                                      {e.location}
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="mr-7 text-primary-500">
                                   Apply <span className="h-5 text-2xl"> → </span>
                                 </div>
                               </div>

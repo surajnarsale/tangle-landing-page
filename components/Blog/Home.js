@@ -61,7 +61,7 @@ const Blogs = [
 const Tabs = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1)
   return (
-    <Container className=" bg-skin mx-auto  max-w-[1330px]">
+    <Container className=" mx-auto max-w-[1330px]  bg-skin">
       <div className="flex">
         <div className="w-full">
           <ul className=" flex list-none flex-row  bg-opacity-0 ">
@@ -69,7 +69,7 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block  px-5 py-3 text-sm' +
-                  (openTab === 1 ? ' text-orange italic underline' : '  text-black')
+                  (openTab === 1 ? ' italic text-primary-500 underline' : '  text-black')
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -86,7 +86,7 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block px-5  py-3 text-sm' +
-                  (openTab === 2 ? ' text-orange italic underline' : '  text-black')
+                  (openTab === 2 ? ' italic text-primary-500 underline' : '  text-black')
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -103,7 +103,7 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block  px-5 py-3 text-sm' +
-                  (openTab === 3 ? ' text-orange italic underline' : ' text-black')
+                  (openTab === 3 ? ' italic text-primary-500 underline' : ' text-black')
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -120,7 +120,7 @@ const Tabs = ({ color }) => {
               <a
                 className={
                   'block px-5 py-3 text-sm ' +
-                  (openTab === 4 ? ' text-orange italic underline' : ' text-black')
+                  (openTab === 4 ? ' italic text-primary-500 underline' : ' text-black')
                 }
                 onClick={(e) => {
                   e.preventDefault()
@@ -142,12 +142,12 @@ const Tabs = ({ color }) => {
                     {Blogs.map((e) => {
                       return (
                         <div key={e.id} className="m-4 cursor-pointer">
-                          <div className="w-26 bg-grey text-skin h-full text-4xl font-medium leading-8 md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
-                            <h1 className="h-15 w-61 text-500 text-culturetext mt-2 ml-4 text-2xl">
+                          <div className="w-26 h-full bg-dark-200 text-4xl font-medium leading-8 text-primary-300 md:py-6 -sm:pt-6 -sm:pb-16 -sm:text-xl ">
+                            <h1 className="h-15 w-61 text-500 mt-2 ml-4 text-2xl text-culturetext">
                               {e.title}
                             </h1>
-                            <p className="text-dusky1 ml-4 mt-4 text-base">{e.date}</p>
-                            <p className="text-dusky1  ml-4 text-base">{e.owner}</p>
+                            <p className="ml-4 mt-4 text-base text-dusky1">{e.date}</p>
+                            <p className="ml-4  text-base text-dusky1">{e.owner}</p>
                           </div>
                           <div className="flex justify-between">
                             <p className="cursor-pointer text-sm text-black">Read now {'→'}</p>
