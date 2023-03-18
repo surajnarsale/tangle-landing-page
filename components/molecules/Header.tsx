@@ -103,15 +103,20 @@ function MobileNavigation() {
 
 const Header = () => {
   return (
-    <header className="w-full font-medium sm:mx-auto sm:max-w-[1378px]">
-      <Container className="sm:px-4 -sm:px-0">
-        <nav className="relative z-50 bg-primary-100 py-4 px-2 text-sm sm:py-8  sm:px-7">
+    <header className=" h-[113px] w-full font-medium sm:mx-auto">
+      <Container className="flex justify-center -sm:px-0">
+        <nav
+          style={{
+            width: `calc(100% - 67px)`,
+          }}
+          className="relative z-50 h-[63px] bg-primary-100 py-4 px-2 text-sm sm:h-[113px] sm:py-8  sm:px-7 -sm:w-screen"
+        >
           <ul className="flex items-center">
             <li>
               <Link href="/">
                 <div className="">
                   <span className="sr-only">Home</span>
-                  <Logo className="h-10 w-[117px] " />
+                  <Logo className="h-10 w-[117px] -md:h-[33px] " />
                 </div>
               </Link>
             </li>
