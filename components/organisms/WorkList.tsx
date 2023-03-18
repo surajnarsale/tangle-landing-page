@@ -4,10 +4,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
-import { useRouter } from 'next/router'
-
 const WorkList = () => {
-  const router = useRouter()
   // useEffect(() => {
   //   const { section } = router.query
   //   const targetSection = document.getElementById(section)

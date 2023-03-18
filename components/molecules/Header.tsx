@@ -124,7 +124,7 @@ const Header = () => {
   const router = useRouter()
 
   return (
-    <header className="  w-full   font-medium sm:mx-auto">
+    <header className=" sticky top-0  z-50 w-full  font-medium sm:mx-auto">
       <Container className="flex justify-center -sm:px-0">
         <nav className="relative z-50 h-[63px] w-screen bg-primary-100 py-4 px-2 text-sm sm:mx-[67px] sm:h-[113px]  sm:py-8 sm:px-7">
           <ul className="flex items-center">
@@ -139,7 +139,13 @@ const Header = () => {
 
             <li className="ml-12 hidden md:block">
               <Link href="/services">
-                <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                <div
+                  className={`rounded-lg py-1 px-2 text-slate-700   hover:underline hover:decoration-orange hover:decoration-1 ${
+                    router.pathname === '/services'
+                      ? 'underline decoration-orange decoration-1'
+                      : ''
+                  }`}
+                >
                   Services
                 </div>
               </Link>
@@ -147,7 +153,11 @@ const Header = () => {
 
             <li className="ml-6 hidden md:block">
               <Link href="/aboutus">
-                <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                <div
+                  className={`rounded-lg py-1 px-2 text-slate-700  hover:underline hover:decoration-orange hover:decoration-1 ${
+                    router.pathname === '/aboutus' ? 'underline decoration-orange decoration-1' : ''
+                  }`}
+                >
                   Company
                 </div>
               </Link>
@@ -163,7 +173,9 @@ const Header = () => {
                     handleScrollToSection('work')
                   }
                 }}
-                className="cursor-pointer rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                className={`cursor-pointer rounded-lg py-1 px-2 text-slate-700   hover:underline hover:decoration-orange hover:decoration-1 ${
+                  router.pathname === '/#work' ? 'underline decoration-orange decoration-1' : ''
+                }`}
               >
                 Work
               </div>
@@ -171,7 +183,11 @@ const Header = () => {
 
             <li className="ml-6 hidden md:block">
               <Link href="/blogs">
-                <div className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                <div
+                  className={`rounded-lg py-1 px-2 text-slate-700   hover:underline hover:decoration-orange hover:decoration-1 ${
+                    router.pathname === '/blogs' ? 'underline decoration-orange decoration-1' : ''
+                  }`}
+                >
                   Resources
                 </div>
               </Link>
