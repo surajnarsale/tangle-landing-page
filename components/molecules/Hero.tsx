@@ -103,11 +103,11 @@ const Hero = () => {
           // ref={ref1}
           initial={{ y: '100vw' }}
           animate={{ y: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1 }}
           className="  -md:h-[500px]"
         >
           <Image
-            className=" h-full object-cover"
+            className=" h-full w-[2000px] object-cover"
             src={heroImage}
             width={800}
             height={800}
@@ -137,10 +137,12 @@ const Hero = () => {
           variants={container}
           className=" h-full text-2xl md:self-end -sm:pt-6 -sm:pb-16 -sm:text-xl "
         >
-          <div className="container">
-            {subheading.map((item, index) => {
+          <div>
+            {/* {subheading.map((item, index) => {
               return <AnimatedText {...item} key={index} />
-            })}
+            })} */}
+            At Tangle Design Studio, we help brands go beyond design by solving real digital
+            problems through our data-driven research methods.
           </div>
         </motion.div>
       </div>
