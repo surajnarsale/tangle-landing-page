@@ -25,7 +25,7 @@ const WorkList = () => {
         title: 'Phynart Smart Home',
         description:
           'At Tangle Design Studio, we help brands go beyond design by solving real digital problems to impact more lives.',
-        image: '@/public/work_1.png',
+        image: '/work_1.png',
       },
       {
         id: 2,
@@ -33,6 +33,7 @@ const WorkList = () => {
         title: 'Sociohub Media',
         description:
           'At Tangle Design Studio, we help brands go beyond design by solving real digital problems to impact more lives.',
+        image: '/work_2.png',
       },
     ]
 
@@ -82,7 +83,7 @@ const WorkList = () => {
                         title={work.title}
                         key={work.id}
                         className="mb-10  md:mb-16"
-                        image={''}
+                        image={work.image}
                       />
                     </>
                   )

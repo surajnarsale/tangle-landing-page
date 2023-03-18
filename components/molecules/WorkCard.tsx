@@ -1,10 +1,7 @@
 import Image from 'next/image'
-import work1 from '@/public/work_1.png'
 import { BaseButton } from '@/components/atoms/BaseButton'
 import { PropsWithChildren } from 'react'
 import clsx from 'clsx'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 type WorkCardProps = {
   className?: string
@@ -19,7 +16,7 @@ const WorkCard = (props: PropsWithChildren<WorkCardProps>): JSX.Element => {
     <>
       <div className={clsx('flex w-full flex-col justify-center md:flex-row', props.className)}>
         <div className="flex justify-center bg-light md:w-1/2">
-          <Image className=" object-cover " src={props.image} alt="work_1" width={10} height={10} />
+          <img className=" object-cover" src={props.image} alt="work_1" />
         </div>
         <div className=" bg-dark-300 p-10 font-medium text-primary-100 md:flex md:w-1/2 md:flex-col md:bg-light md:text-dark-500">
           <div className="mt-auto ">
