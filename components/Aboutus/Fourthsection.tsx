@@ -95,15 +95,9 @@ const Fourthsection = () => {
       <div className="bg-dark-200 pb-14">
         <Container className=" mx-auto max-w-[1110px] px-5 pb-4 ">
           <div className=" flex flex-col justify-between pt-12 pb-16 text-dusky md:flex-row">
-            <div
-              className=" font-melodrama text-6xl font-bold
- text-primary-100 md:w-3/6"
-            >
+            <div className=" font-melodrama text-6xl font-bold text-primary-100 md:w-3/6">
               Join us and be the{' '}
-              <span
-                className="font-General Sans text-6xl
- font-medium italic underline  decoration-pink"
-              >
+              <span className="font-General Sans text-6xl font-medium italic underline  decoration-pink">
                 next tangler.
               </span>
             </div>
@@ -129,8 +123,9 @@ const Fourthsection = () => {
             })}
           </div>
           <hr className="text-dark-100" />
-
-          <h2 className="mt-8 mb-4 h-9 text-3xl font-medium text-primary-200">Open Positions</h2>
+          <section id="open-positions">
+            <h2 className="mt-8 mb-4 h-9 text-3xl font-medium text-dusky">Open Positions</h2>
+          </section>
         </Container>
 
         <Container className=" mx-auto max-w-[1110px]">

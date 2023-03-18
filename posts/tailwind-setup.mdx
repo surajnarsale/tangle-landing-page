@@ -1,0 +1,159 @@
+---
+title: 'How to set up Tailwind CSS'
+date: 'September 2, 2021'
+description: "Here's a short guide on setting up Tailwind CSS"
+thumbnailUrl: '/tailwindcss-thumbnail.jpg'
+tags: ['tailwindcss', 'styling']
+author: 'Chirag Kale'
+readingTime: '3 min'
+---
+
+##:globe_with_meridians:How browser runs JavaScript
+
+- The browser contains a :fire:JavaScript engine that can be pointed as the :dart:brain of the browser.
+- Without JavaScript, the browser engine would not be able to read JavaScript files.
+- So if your HTML file contains many script files, probably engine would load your files in the order which you don’t want.
+- If you aren't dynamically loading scripts or marking them as defer or async, then scripts are loaded in the order encountered in the page. It doesn't matter whether it's an external script or an inline script - they are executed in the order they are encountered in the page.
+- To setup the order of scripts would be the restless activity?
+
+_To solve this problem_ :wave:**WEBPACK** _can come in handy._
+##:white_check_mark: What is WEBPACK?
+
+- If you are into building moderns JavaScript apps, probably you would have come across the term **webpack**.
+- Webpack is a **module bundler**.
+- It bundles all your JavaScript files and produces a single JavaScript file, mostly called as **production build file**.
+
+##:white_check_mark: Why to use WEBPACK?
+
+1.  So you don’t want to manage the order of dependencies.
+2.  It converts all your JavaScript files into one big JavaScript file.
+3.  It also converts all your CSS files into one single CSS file.
+
+##:white_check_mark: How WEBPACK works:slot_machine:?
+
+1.  It observes your import-export statements and builds a **DEPENDENCY GRAPH**. Then it generates one or more bundles and pushes them into the production build folder
+2.  Webpack also takes your assets and converts them to dependencies.
+
+##:white_check_mark: Principals on which WEBPACK works
+_You don't need to understand these below concepts. We will see these in practice in the next section. They are here to just give you an overview._
+
+| PRINCIPALS |                                                                                                                                                        |
+| :--------: | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|  1. Entry  | Entry is the entry point for the application. It is the first module (JavaScript file)that Webpack will process to build out the full dependency graph |
+| 2. Output  | Output point is where the files are to be written on disk with the name of the files                                                                   |
+| 3. Loaders | Loaders can transform files from a different language (like TypeScript) to JavaScript or load inline images as data URLs                               |
+| 4. Plugins | Plugins handle the additional tasks that can’t be completed by a loader.                                                                               |
+|  5. Mode   | Mode tells Webpack which configuration and optimizations to use for your application.                                                                  |
+
+##:white_check_mark: Let's get to the playground
+
+- _must have node installed._
+
+##:+1: Dependencies
+
+1.  `npm init -y` : (Initialize node project)
+2.  `npm i wepack webpack-cli --save-dev` : (They are installed as dev dependency cause they just become Single Page Application at the end during production.)
+3.  `npm i svg-inline-loader --save-dev`: (Just a random SVG dependency for our practice.) JavaScript is not able to load SVG files directly, so we are going to use the svg-inline-loader module.
+4.  `npm i --save-dev css-loader`: (css loader used to load css in html file)
+5.  `npm i --save-dev babel-loader`:(so that we can use modern JavaScript)
+6.  `npm i --save-dev html-webpack-plugin`:(it injects your output code into html)
+7.  `npm i --save-dev webpack-dev-server`:(dev server which fast reloads when you save your file.)
+
+## :+1:`webpack.config.js`
+
+- Create file `webpack.config.js` in the root folder.
+
+_Add following code in it_
+
+```javascript
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+module.exports = {
+  entry: './app/index.js',
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        use: 'svg-inline-loader',
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(js)$/,
+        use: 'babel-loader',
+      },
+    ],
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  plugins: [new HtmlWebpackPlugin()],
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+}
+```
+
+### `webpack.config.js` Explained
+
+1. `entry`:
+   -- In the above code, we defined entry point to our codebase ie. `entry: "./src/index.js",`JavaScript engine would start to read code from this file.
+2. `modules`:
+
+- We also defined some loaders like `svg-inline-loader` & `css-loader`
+  --css-loader uses `style-loader` under the hood.
+  `rules` defines some rules
+  `test` search files with given extention
+  `use` when files with given extention is found use particular loader
+
+3. `output`:
+
+- It defines the path of the output file
+
+4. `plugins`: - `html-webpack-plugin` : It generates`index.html` file & takes output file from above and injects it into `index.html`
+5. `mode`: - It says whether code should be in **production mode** or **development mode**.
+
+##:+1:`package.json`
+_Add these two scripts in package.json_
+:heavy_check_mark: For macOS users
+
+```javascript
+  "scripts": {
+        "start": "webpack serve",
+        "build": "NODE_ENV='production' webpack"
+    },
+```
+
+:heavy_check_mark:For Window users
+
+```javascript
+  "scripts": {
+        "start": "webpack serve",
+        "build": "SET NODE_ENV='production' & webpack"
+    },
+```
+
+1. `"start":"webpack"`: It seraches in node_modules for webpack
+2. `"build":"SET NODE_ENV='production' & webpack"` : It creates dist folder which can be used for production.
+
+## :+1:`index.js`
+
+_create `app/index.js`_
+
+_Add following code in it_
+
+```javascript
+const data = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+console.log(data)
+```
+
+##:white_check_mark: Conclusion
+
+1. If you run the `start` script you can see our app running in the browser.
+2. If you run the `build` script you can see webpack creates dist folder which is our production build.
+
+Finally, we can see the JS file running in the browser is nothing but the bundle.js.
+
+![Browser file](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i9zh03umtnw5s0vf3ij2.png)

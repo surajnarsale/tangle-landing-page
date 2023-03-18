@@ -2,6 +2,7 @@ import create from 'zustand'
 
 type BearState = {
   bears: number
+
   increasePopulation: (by: number) => void
   decreasePopulation: (by: number) => void
   removeAllBears: () => void

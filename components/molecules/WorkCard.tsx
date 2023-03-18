@@ -23,7 +23,7 @@ const WorkCard = (props: PropsWithChildren<WorkCardProps>): JSX.Element => {
         </div>
         <div className=" bg-dark-300 p-10 font-medium text-primary-100 md:flex md:w-1/2 md:flex-col md:bg-light md:text-dark-500">
           <div className="mt-auto ">
-            <p className=" pb-3 text-xs uppercase tracking-[0.4em] ">{props.category}</p>
+            <p className="pb-3 text-xs uppercase tracking-[0.4em] ">{props.category}</p>
             <p className="pb-4 text-2xl">{props.title}</p>
             <p className="pb-4 text-sm font-normal leading-6 text-primary-200 md:text-dark-200">
               {props.description}

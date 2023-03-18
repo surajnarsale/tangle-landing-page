@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import { Container } from '@/components/atoms/Container'

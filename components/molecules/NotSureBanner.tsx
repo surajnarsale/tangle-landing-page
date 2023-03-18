@@ -17,7 +17,7 @@ const NotSureBanner = (props: PropsWithChildren<NotSureBannerProps>): JSX.Elemen
     >
       <p className=" text-2xl font-medium text-primary-100">
         Not sure what your business needs? <br />
-        <span className="text-culturetext italic">Talk to our design expert</span>
+        <span className="italic text-culturetext">Talk to our design expert</span>
       </p>
       <BookScheduleButton />
     </div>

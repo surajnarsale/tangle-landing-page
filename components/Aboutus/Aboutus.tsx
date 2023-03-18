@@ -4,7 +4,7 @@ import Heroabout from './HeroAboutus'
 import CultureList from './CultureList'
 import Herothird from './Herothird'
 import Fourthsection from './Fourthsection'
-import Footer from '../molecules/Footer'
+import { handleScrollToSection } from '@/utils/hadle-scroll-to-section'
 
 const Company = () => {
   const [openTab, setOpenTab] = React.useState(1)
@@ -22,6 +22,7 @@ const Company = () => {
                 onClick={(e) => {
                   e.preventDefault()
                   setOpenTab(1)
+                  handleScrollToSection('about-us')
                 }}
                 data-toggle="tab"
                 href="#link1"
@@ -39,6 +40,7 @@ const Company = () => {
                 onClick={(e) => {
                   e.preventDefault()
                   setOpenTab(2)
+                  handleScrollToSection('open-positions')
                 }}
                 data-toggle="tab"
                 href="#link2"
@@ -51,14 +53,11 @@ const Company = () => {
           <div className="break-wordsbg-opacity-0 relative ">
             <div className=" bg-opacity-0  py-5">
               <div className="tab-content tab-space">
-                <div className={openTab === 1 ? 'block' : 'hidden'} id="link1">
+                <div id="link1">
                   <Heroabout />
                   <CultureList />
                   <Herothird />
                   <Fourthsection />
-                </div>
-                <div className={openTab === 2 ? 'block' : 'hidden'} id="link2">
-                  <p>Careers</p>
                 </div>
               </div>
             </div>
