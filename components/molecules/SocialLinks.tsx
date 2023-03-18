@@ -1,14 +1,15 @@
 import { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import { FooterLinkButton } from '@/components/atoms/FooterLinkButton'
+import Link from 'next/link'
 
 const links = [
-  { name: 'Services' },
-  { name: 'Privacy Policy' },
-  // { name: 'Work' },
-  { name: 'Cookies' },
-  { name: 'About us' },
-  { name: 'Career' },
+  { name: 'Services', to: '/services' },
+  { name: 'Work', to: '/work' },
+  { name: 'About us', to: '/aboutus' },
+  { name: 'Career', to: '/career' },
+  // { name: 'Privacy Policy' , to:'/privacy-policy' },
+  // { name: 'Cookies' , to:'/cookies' },
 ]
 const socialLinks = [
   { name: 'Linkedin', link: 'https://www.linkedin.com/company/tangledesignstudio/' },
@@ -33,14 +34,16 @@ const SocialLinks = (props: PropsWithChildren<SocialLinksProps>): JSX.Element =>
               <>
                 <div>
                   <div>
-                    <p className="cursor-pointer text-xl font-medium ">{link.name}</p>
+                    <Link href={link.to}>
+                      <p className="cursor-pointer text-xl font-medium ">{link.name}</p>
+                    </Link>
                   </div>
                 </div>
               </>
             )
           })}
         </div>
-        <div className="md:grid md:grid-cols-2 md:gap-4 lg:mb-10 lg:gap-0 -md:mt-10">
+        <div className="md:grid md:grid-cols-2 md:gap-4 lg:mb-10 lg:gap-2 -md:mt-10">
           {socialLinks.map((link) => {
             return (
               <>

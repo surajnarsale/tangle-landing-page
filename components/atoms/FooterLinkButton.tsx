@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
+import Arrow from '@/components/atoms/svgs/social-links-arrow.svg'
 
 type FooterLinkButtonProps = {
   className?: string
@@ -13,12 +13,12 @@ export function FooterLinkButton(props: PropsWithChildren<FooterLinkButtonProps>
     <Link href={props.href} target="_blank">
       <div
         className={clsx(
-          'flex max-w-[220px] items-center justify-between  rounded-full bg-dark-500  py-4 px-8 px-4 py-2 text-2xl text-sm text-light sm:px-7 sm:py-3 ',
+          'flex max-w-[220px] items-center justify-between  rounded-full bg-dark-500 px-7 py-3 text-light ',
           props.className
         )}
       >
         {props.children}
-        <ArrowTopRightOnSquareIcon className="h-8 w-8" aria-hidden="true" />
+        <Arrow className="h-10 w-12 " />
       </div>
     </Link>
   )
