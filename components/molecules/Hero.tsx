@@ -28,7 +28,7 @@ const Hero = () => {
       type: 'heading1',
       text: 'digital products.',
       class:
-        'relative font-generalSans font-medium italic underline decoration-primary-500 decoration-4',
+        'relative font-generalSans font-medium text italic underline decoration-primary-500 decoration-4  ',
     },
   ]
   const caption = [{ type: 'paragraph', text: 'from India to the world' }]
@@ -48,7 +48,7 @@ const Hero = () => {
   }
 
   return (
-    <Container className=" mx-auto max-w-[1110px] px-5 pb-5 pt-20 text-dark-500 lg:pt-32 ">
+    <Container className="  mx-auto max-w-[1110px] px-5 pb-[68px] pt-20 text-dark-500 sm:pb-[150px] lg:pt-32">
       {/* <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -90,7 +90,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         variants={container}
-        className=" mx-auto  pb-5 font-melodrama text-4xl font-bold text-slate-900 sm:text-7xl"
+        className=" text  mx-auto pb-5 font-melodrama  text-[38px] font-bold leading-[46px] text-slate-900 sm:text-7xl sm:leading-[88px]  "
       >
         <div className="container">
           {Heading.map((item, index) => {
@@ -131,20 +131,16 @@ const Hero = () => {
           </Balancer>
         </motion.div> */}
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={container}
-          className=" h-full text-2xl md:self-end -sm:pt-6 -sm:pb-16 -sm:text-xl "
-        >
-          <div>
-            {/* {subheading.map((item, index) => {
+        <div className=" h-full text-[28px] md:self-end -sm:pt-6 -sm:pb-16 -sm:text-3xl ">
+          {/* {subheading.map((item, index) => {
               return <AnimatedText {...item} key={index} />
             })} */}
-            At Tangle Design Studio, we help brands go beyond design by solving real digital
-            problems through our data-driven research methods.
-          </div>
-        </motion.div>
+          At Tangle Design Studio, we help brands go beyond design by solving real digital problems
+          through our{' '}
+          <span className="font-generalSans font-medium italic underline decoration-primary-500 decoration-4  ">
+            data-driven research methods.
+          </span>
+        </div>
       </div>
     </Container>
   )

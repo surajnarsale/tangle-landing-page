@@ -7,8 +7,11 @@ import { BaseButton } from '@/components/atoms/BaseButton'
 import { Container } from '@/components/atoms/Container'
 import { Logo } from '@/components/atoms/Logo'
 import { handleScrollToSection } from '@/utils/hadle-scroll-to-section'
+import { useRouter } from 'next/router'
 
 function MobileNavigation() {
+  const router = useRouter()
+
   return (
     <Popover>
       {({ open, close }) => (
@@ -62,30 +65,46 @@ function MobileNavigation() {
                 className="absolute inset-x-0 top-full mt-4 origin-top space-y-4 rounded-2xl bg-white p-6 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
               >
                 <li>
-                  <Link href="#features">
+                  <Link href="/services">
                     <div className="block w-full" onClick={() => close()}>
                       Services
                     </div>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#testimonials">
-                    <div className="block w-full" onClick={() => close()}>
+                  <Link href="/aboutus">
+                    <div
+                      className="block w-full"
+                      onClick={() => {
+                        close()
+                      }}
+                    >
                       Company
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="#testimonials">
-                    <div className="block w-full" onClick={() => close()}>
+                    <div
+                      className="block w-full"
+                      onClick={async () => {
+                        close()
+                        if (router.route === '/') {
+                          handleScrollToSection('work')
+                        } else {
+                          await router.push('/')
+                          handleScrollToSection('work')
+                        }
+                      }}
+                    >
                       Work
                     </div>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#pricing">
+                  <Link href="/blogs">
                     <div className="block w-full" onClick={() => close()}>
-                      Stories
+                      Resources
                     </div>
                   </Link>
                 </li>
@@ -102,15 +121,12 @@ function MobileNavigation() {
 }
 
 const Header = () => {
+  const router = useRouter()
+
   return (
-    <header className=" h-[113px] w-full font-medium sm:mx-auto">
+    <header className="  w-full   font-medium sm:mx-auto">
       <Container className="flex justify-center -sm:px-0">
-        <nav
-          style={{
-            width: `calc(100% - 67px)`,
-          }}
-          className="relative z-50 h-[63px] bg-primary-100 py-4 px-2 text-sm sm:h-[113px] sm:py-8  sm:px-7 -sm:w-screen"
-        >
+        <nav className="relative z-50 h-[63px] w-screen bg-primary-100 py-4 px-2 text-sm sm:mx-[67px] sm:h-[113px]  sm:py-8 sm:px-7">
           <ul className="flex items-center">
             <li>
               <Link href="/">
@@ -139,7 +155,14 @@ const Header = () => {
 
             <li className="ml-6 hidden md:block">
               <div
-                onClick={() => handleScrollToSection('work')}
+                onClick={async () => {
+                  if (router.route === '/') {
+                    handleScrollToSection('work')
+                  } else {
+                    await router.push('/')
+                    handleScrollToSection('work')
+                  }
+                }}
                 className="cursor-pointer rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
               >
                 Work

@@ -13,17 +13,17 @@ type AboutWorkingWithUsProps = {
 const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JSX.Element => {
   return (
     <>
-      <div className={clsx('bg-dark-200 py-20 -sm:py-10', props.className)}>
-        <Container className="mx-auto flex max-w-[1110px] justify-between  px-5 text-dark-500 -md:flex-col -md:gap-8 ">
+      <div className={clsx('bg-dark-200 py-[60px] md:py-[150px]', props.className)}>
+        <Container className="mx-auto flex max-w-[1110px] justify-between  px-5 text-dark-500 -md:flex-col -md:gap-8  ">
           <div className="">
-            <p className="font-melodrama text-6xl font-bold text-primary-100 -md:w-80 -md:text-4xl">
+            <p className="font-melodrama text-[38px] font-bold text-primary-100 md:text-[60px] -md:w-80 -md:text-4xl">
               About working <br />
               <span className="font-generalSans font-medium italic underline decoration-pink decoration-4">
                 with us
               </span>
             </p>
           </div>
-          <div className="ml-20 max-w-[424px] self-end  text-xl text-primary-200 -sm:pt-6 -sm:pb-16 -sm:text-xl -md:w-80 -md:self-end">
+          <div className=" max-w-[424px] self-end  text-[24px]  text-primary-200 md:text-[20px] -sm:pt-6 -sm:pb-16 -sm:text-xl  -md:self-end">
             <p className="">
               Its an immense pleasure to hear from those we've helped. While doing a project, we
               always put all the energy as if your brand is ours.
@@ -34,7 +34,7 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
           <div className=" mt-12 flex flex-row md:space-x-14 -sm:flex-col -md:flex-col  ">
             <div className="  -md:h-[500px]">
               <Image
-                className=" -md-h-106 h-full object-cover -md:w-80"
+                className=" -md-h-106 h-full object-cover "
                 src={service3}
                 width={427}
                 height={460}
@@ -49,7 +49,7 @@ const WorkingAdvantage = (props: PropsWithChildren<AboutWorkingWithUsProps>): JS
                   vision for design.
                 </span>
               </Balancer>
-              <h1 className="mt-4 w-96 text-xl text-duskyfont -md:w-80">
+              <h1 className="mt-4 w-96 text-xl text-duskyfont ">
                 It is a long established fact that a reader will be distracted by the readable
                 content of a page when looking at its layout.
               </h1>

@@ -15,7 +15,8 @@ const BookScheduleButton = (props: PropsWithChildren<BookScheduleButtonProps>): 
         props.className
       )}
     >
-      Book a schedule. <span className="italic text-pink">Its free</span>
+      Book a call.
+      <span className="italic text-pink"> Its free</span>
     </BaseButton>
   )
 }

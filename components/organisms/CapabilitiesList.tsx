@@ -90,13 +90,14 @@ const CapabilitiesList = () => {
 
   return (
     <>
-      <div className="pb-14">
+      <div className=" pb-[52px] md:pb-[195px]">
         <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 ">
-          <div>
-            <p className=" mb-9 pt-16 text-3xl font-medium italic underline decoration-pink decoration-4 lg:pt-32">
-              <span className="font-melodrama text-4xl font-bold"> Our</span> <br /> Capabilities
+          <div className="mb-[56px]">
+            <p className=" mb-9 pt-16  text-[38px] font-medium  sm:text-[60px]  lg:pt-32">
+              <span className="font-melodrama   font-bold"> Our</span> <br />
+              <span className="italic underline decoration-pink decoration-4">Capabilities</span>
             </p>
-            <p className=" text-2xl font-normal">
+            <p className=" max-w-[467px] text-2xl font-normal">
               We believe in delivering products beyond expectations. We put all the effort to build
               things which feel larger than life.
             </p>

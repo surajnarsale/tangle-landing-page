@@ -8,9 +8,12 @@ import { Container } from '../atoms/Container'
 import { BaseButton } from '@/components/atoms/BaseButton'
 
 const serviceOptions = [
-  { id: 1, name: 'UX Design', unavailable: false },
-  { id: 2, name: 'Web Development', unavailable: false },
-  { id: 3, name: 'UI Design', unavailable: false },
+  { id: 1, name: 'Digital Branding', unavailable: false },
+  { id: 2, name: 'UI/UX Design', unavailable: false },
+  { id: 3, name: 'Digital Prototyping', unavailable: false },
+  { id: 3, name: 'Interaction Design', unavailable: false },
+  { id: 3, name: 'Illustrations', unavailable: false },
+  { id: 3, name: 'Motion Graphics', unavailable: false },
 ]
 
 type EnquiryFormProps = {
