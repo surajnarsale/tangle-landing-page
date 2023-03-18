@@ -26,10 +26,7 @@ const WorkCard = (props: PropsWithChildren<WorkCardProps>): JSX.Element => {
               {props.description}
             </p>
             <div className="mb-11 h-[5px] w-[18px] bg-pink" />
-            <BaseButton
-              href="/id"
-              className="w-fit -md:ml-auto -md:bg-primary-100 -md:text-dark-200"
-            >
+            <BaseButton className="w-fit -md:ml-auto -md:bg-primary-100 -md:text-dark-200">
               Case study
             </BaseButton>
           </div>

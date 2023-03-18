@@ -8,16 +8,29 @@ type ButtonProps = {
 }
 
 export function BaseButton(props: PropsWithChildren<ButtonProps>): JSX.Element {
-  return (
-    <Link href={props.href!}>
+  if (props.href) {
+    return (
+      <Link href={props.href!}>
+        <div
+          className={clsx(
+            'flex items-center justify-center rounded-3xl bg-dark-500 px-4 py-2 text-sm text-light transition duration-300 ease-in-out hover:bg-dark-200 sm:px-7 sm:py-3',
+            props.className
+          )}
+        >
+          {props.children}
+        </div>
+      </Link>
+    )
+  } else {
+    return (
       <div
         className={clsx(
-          'flex items-center justify-center rounded-3xl bg-dark-500 px-4 py-2 text-sm text-light sm:px-7 sm:py-3 ',
+          'flex cursor-pointer items-center justify-center rounded-3xl bg-dark-500 px-4 py-2 text-sm text-light transition duration-300 ease-in-out hover:bg-dark-200 sm:px-7 sm:py-3 ',
           props.className
         )}
       >
         {props.children}
       </div>
-    </Link>
-  )
+    )
+  }
 }
