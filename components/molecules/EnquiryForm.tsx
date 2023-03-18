@@ -24,11 +24,11 @@ const EnquiryForm = (props: PropsWithChildren<EnquiryFormProps>): JSX.Element =>
     <div className={clsx('bg-primary-300 py-12', props.className)}>
       <Container className="mx-auto max-w-[1110px] px-5 pb-5 text-dark-500 ">
         <p className=" text-xl ">Have a project on mind?</p>
-        <p className="mt-3  font-melodrama text-5xl font-semibold">hey@tangle.co.in</p>
+        <p className="mt-3 font-melodrama text-5xl font-semibold -md:text-2xl">hey@tangle.co.in</p>
 
         <Listbox value={selectedService} onChange={setSelectedService}>
           <div className="mt-10">
-            <Listbox.Button className="relative w-full cursor-default rounded-full border  border-dark-400 px-7 py-5 pl-3  text-left  focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+            <Listbox.Button className="focus-visible:ring-offset-orange-300 relative w-full cursor-default rounded-full  border border-dark-400 px-7 py-5  pl-3  text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
               <span className="block truncate">{selectedService.name}</span>
               <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                 <ChevronDownIcon className="h-10 w-10 text-dark-500" aria-hidden="true" />

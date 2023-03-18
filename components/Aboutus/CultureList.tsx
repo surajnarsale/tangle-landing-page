@@ -93,9 +93,11 @@ const CultureList = () => {
       <div className="w-full bg-dark-300 pb-14">
         <Container className=" mx-auto  max-w-[1110px] px-5 pb-4 ">
           <div className="pb-16 text-white">
-            <p className=" lg:pt-30 mb-9 pt-16 text-3xl font-medium italic">
+            <p className=" lg:pt-30 mb-9 pt-16 font-melodrama text-3xl font-bold">
               Our Tangled{' '}
-              <span className="font-melodrama text-4xl  underline decoration-pink">culture</span>{' '}
+              <span className="font-general-sans text-4xl italic  underline decoration-pink">
+                culture
+              </span>{' '}
             </p>
           </div>
           <div className="">
@@ -125,16 +127,18 @@ const CultureList = () => {
               placeholder="blur"
             />
           </div>
-          <div className=".text-white w-221 mt-28 md:grid md:grid-cols-2 md:gap-4">
+          <div className=".text-white border-3 w-221 mt-28 md:grid md:grid-cols-2 md:gap-4">
             {allCapabilities.map((capability) => {
               return (
                 <motion.div
                   ref={ref}
-                  className=" mt-2 mb-2 h-full  font-medium leading-8 text-dusky md:py-6 -sm:pt-3 -sm:pb-5 -sm:text-xl  -md:mt-11 -md:text-2xl"
+                  className="mb-2 font-medium  leading-8 text-dusky md:py-6 -sm:pt-3 -sm:pb-5 -sm:text-xl  -md:mt-11 -md:text-2xl"
                   key={capability.id}
                 >
-                  <h1 className=".leading-11 w-60 text-4xl text-culturetext">{capability.title}</h1>
-                  <p className=".leading-8.67 w-100  text-2xl -sm:mt-2 -sm:w-80 -md:mt-3 -md:mb-4">
+                  <h1 className=".leading-11 w-60  text-4xl text-primary-400">
+                    {capability.title}
+                  </h1>
+                  <p className=".leading-8.67 w-80  pt-3  text-2xl text-primary-100 -sm:mt-2 -sm:w-80 -md:mt-3 -md:mb-4">
                     {capability.description1}{' '}
                     <span className=".leading-8.67 text-2xl italic">{capability.description2}</span>
                   </p>

@@ -28,7 +28,7 @@ const Hero = () => {
       type: 'heading1',
       text: 'digital products.',
       class:
-        'relative font-generalSans font-medium italic underline decoration-orange decoration-4',
+        'relative font-generalSans font-medium italic underline decoration-primary-500 decoration-4',
     },
   ]
   const caption = [{ type: 'paragraph', text: 'from India to the world' }]

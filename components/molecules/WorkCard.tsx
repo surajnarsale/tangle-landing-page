@@ -19,16 +19,9 @@ const WorkCard = (props: PropsWithChildren<WorkCardProps>): JSX.Element => {
     <>
       <div className={clsx('flex w-full flex-col justify-center md:flex-row', props.className)}>
         <div className="flex justify-center bg-light md:w-1/2">
-          {/* <Image
-            className=" object-cover "
-            src={props.image}
-            alt="work_1"
-            placeholder="blur"
-            width={10}
-            height={10}
-          /> */}
+          <Image className=" object-cover " src={props.image} alt="work_1" width={10} height={10} />
         </div>
-        <div className="bg-dark-300 p-10 font-medium text-primary-100 md:flex md:w-1/2 md:flex-col md:bg-light md:text-dark-500">
+        <div className=" bg-dark-300 p-10 font-medium text-primary-100 md:flex md:w-1/2 md:flex-col md:bg-light md:text-dark-500">
           <div className="mt-auto ">
             <p className="pb-3 text-xs uppercase tracking-[0.4em] ">{props.category}</p>
             <p className="pb-4 text-2xl">{props.title}</p>

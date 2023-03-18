@@ -20,6 +20,7 @@ module.exports = {
           400: '#FFB697',
           300: '#FFEAD8',
           200: '#F1E8DF',
+          700: '#B5719D',
         },
         pink: '#FF94DC',
         dark: {
@@ -27,6 +28,7 @@ module.exports = {
           400: '#1F1E1D',
           300: '#292725',
           200: '#393634',
+          700: '#000000',
         },
         light: '#ffff',
         culturetext: '#FFB697',
